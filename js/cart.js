@@ -19,7 +19,7 @@ function showAlert(message, type) {
     alertContainer.appendChild(alertDiv);
     setTimeout(() => {
         alertDiv.remove();
-    }, 1500);
+    }, 1000);
 }
 
 function drawCartsProducts(products) {
