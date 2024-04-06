@@ -184,10 +184,10 @@ img {
 
 #alert-container {
     position: fixed;
-    top: 90px;
+    top: 85px;
     right: 20px;
     z-index: 1000;
-    max-width: 250px; 
+    max-width: 250px;
 }
 
 .alert {
@@ -195,11 +195,13 @@ img {
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #d9d9d9; 
-    color: #22263e; 
+    background-color: #ffffff;
+    color: #22263e;
     padding: 10px;
     font-size: 14px;
 }
+
+/* ///////////////// responsive //////////////// */
 
 @media only screen and (max-width: 992px) {
     #user_info li {
