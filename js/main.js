@@ -110,23 +110,24 @@ if(addedItem.length === 0 ) {
     badge.style.display = "none";
 }
 
-if (localStorage.getItem=("userName")) {
-    function addToCart(id) {
+function addToCart(id) {
+    if (localStorage.getItem("userName")) {
         let choosenItem = products.find((item) => item.id === id);
-        cartsProductDiv.innerHTML += ` <P class="product-info">${choosenItem.title}</P>`;
-
-        addedItem = [...addedItem, choosenItem]
-        localStorage.setItem("productsInCart", JSON.stringify(addedItem))
-        let cartProductsLength = document.querySelectorAll('.carts_products div p').length;
-    badge.style.display = "block";
-    badge.innerHTML = cartProductsLength;
-
-        showAlert("Product added to cart successfully!", "success");
+        if (choosenItem) {
+            cartsProductDiv.innerHTML += `<p class="product-info">${choosenItem.title}</p>`;
+            addedItem.push(choosenItem);
+            localStorage.setItem("productsInCart", JSON.stringify(addedItem));
+            let cartProductsLength = addedItem.length;
+            badge.style.display = "block";
+            badge.innerHTML = cartProductsLength;
+            showAlert("Product added to cart successfully!", "success");
+        } else {
+            showAlert("Product not found!", "danger");
+        }
+    } else {
+        showAlert("Please sign in first!", "danger");
     }
-} else {
-    window.location = "login.html"
 }
-
 
 
 ///////////////////////////////
