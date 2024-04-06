@@ -200,3 +200,47 @@ img {
     padding: 10px;
     font-size: 14px;
 }
+
+@media only screen and (max-width: 992px) {
+    #user_info li {
+        margin: 7px 11px;
+        position: relative;
+        margin-right: -5px;
+    }
+
+    .product_item {
+        width: 170%;
+
+    }
+
+    .header-content .brand {
+        font-size: 19px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+    .section-form {
+        width: 90%;
+
+    }
+
+    .carts_products {
+        width: 138px;
+        top: 59px;
+        left: -50px;
+        z-index: 50;
+    }
+
+    .product-info {
+        margin: 5px -4px 0px 5px;
+        font-size: 17px;
+    }
+
+    .header-content .brand {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 2px;
+        display: ruby;
+        padding-left: 3px;
+    }
+}
